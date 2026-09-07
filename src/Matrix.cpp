@@ -61,6 +61,5 @@ auto Matrix::clear_lines() -> unsigned {
 }
 
 auto matrix::is_piece_within_bounds(const Piece::Shape &shape) -> bool {
-  return std::ranges::all_of(
-      shape, [](auto pos) { return is_pos_within_bounds(pos); });
+  return std::ranges::all_of(shape, is_pos_within_bounds);
 }
